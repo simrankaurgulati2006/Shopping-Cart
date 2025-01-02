@@ -1,16 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-export default function Footer() {
+export default function Footer(props) {
   return (
-    <footer className="footer">
-      <div className="container">
-        <p className="text-center">© 2025 My Shopping Cart. All rights reserved.</p>
-        <div className="social-links text-center">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">Facebook</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">Twitter</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">Instagram</a>
-        </div>
+    <div className='row fixed-bottom '>
+      <button className='btn btn-danger col-2' onClick={()=>{
+         props.resetQuantity()
+      }}>Reset</button>
+      <div className='col-8 bg-dark text-white text-center'> {props.totalAmount}
+      {props.totalAmount}
       </div>
-    </footer>
-  );
-}
+      <button className='btn btn-primary col-2 fixed-bottom'>Pay Now</button>
+      <div className="col-2 btn btn-danger mt-3">
+      Remove
+      </div>
+    </div>
+
+
+  )
+};
+

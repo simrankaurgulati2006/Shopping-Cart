@@ -1,7 +1,9 @@
 import React from "react";
+import Product from "./Product"; 
 
 export default function ProductList(props) {
-  console.log(props.productList); // Log the productList prop to debug
+  
+  console.log(props.productList);
 
   return (
     <div className="container mt-3"> {/* Ensure the container takes full width */}
@@ -18,13 +20,16 @@ export default function ProductList(props) {
 
               <div className="d-flex align-items-center">
                 <div className="btn-group me-2" role="group" aria-label="Product Quantity Controls">
-                  <button type="button" className="btn btn-danger">
+                  {/* Decrease button */}
+                  <button type="button" className="btn btn-danger" onClick={() => props.decrementQuantity(index)}>
                     -
                   </button>
+                  {/* Quantity display */}
                   <button type="button" className="btn btn-warning">
                     {product.quantity}
                   </button>
-                  <button type="button" className="btn btn-success">
+                  {/* Increase button */}
+                  <button type="button" className="btn btn-success" onClick={() => props.incrementQuantity(index)}>
                     +
                   </button>
                 </div>
@@ -42,3 +47,4 @@ export default function ProductList(props) {
     </div>
   );
 }
+
