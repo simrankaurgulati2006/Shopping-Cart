@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ProductList from './components/ProductList';
 import React, { useState } from 'react';
+import AddItem from './components/AddItem';
+
 
 function App() {
   // Initialize the productList state with hardcoded products
@@ -75,6 +77,7 @@ function App() {
     <>
       <Navbar />
       <main className="container">
+        <AddItem />
         {/* Pass incrementQuantity and decrementQuantity as props to ProductList */}
         <ProductList
           productList={productList}
