@@ -1,49 +1,53 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 class AddItem extends Component {
-  
   render() { 
-    return  <div>
-    <form>
-      <div className="mb-3">
-        <label htmlFor="exampleInputEmail1" className="form-label">
-          Email address
-        </label>
-        <input
-          type="email"
-          className="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-        />
-        <div id="emailHelp" className="form-text">
-          We'll never share your email with anyone else.
-        </div>
+    return (
+      <div>
+        <form>
+          {/* Name Input Section */}
+          <div className="mb-3">
+            <label htmlFor="inputName" className="form-label">
+              NAME
+            </label>
+            <input
+              type="text" // Changed from email to text for name input
+              className="form-control"
+              id="inputName"
+              aria-describedby="nameHelp" // Changed to a more meaningful ID
+            />
+            {/* Optional Help text */}
+            <div id="nameHelp" className="form-text">
+              Enter your full name.
+            </div>
+          </div>
+
+          {/* Contact Number Input Section */}
+          <div className="mb-3">
+            <label htmlFor="inputNumber" className="form-label">
+              CONTACT NUMBER
+            </label>
+            <input
+              type="tel" // Changed from number to tel for contact numbers
+              className="form-control"
+              id="inputNumber"
+              aria-describedby="numberHelp" // Changed to a more meaningful ID
+            />
+            {/* Optional Help text */}
+            <div id="numberHelp" className="form-text">
+              Enter a valid contact number.
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <button type="submit" className="btn btn-primary">
+            SUBMIT
+          </button>
+        </form>
       </div>
-      <div className="mb-3">
-        <label htmlFor="exampleInputPassword1" className="form-label">
-          Password
-        </label>
-        <input
-          type="password"
-          className="form-control"
-          id="exampleInputPassword1"
-        />
-      </div>
-      <div className="mb-3 form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="exampleCheck1"
-        />
-        <label className="form-check-label" htmlFor="exampleCheck1">
-          Check me out
-        </label>
-      </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
-  </div>;
+    );
   }
 }
- 
+
 export default AddItem;
+
