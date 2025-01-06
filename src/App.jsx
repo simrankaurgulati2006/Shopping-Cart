@@ -87,6 +87,7 @@ function App() {
         />
       </main>
       {/* Pass the totalAmount and resetQuantity to Footer */}
+      
       <Footer totalAmount={totalAmount} resetQuantity={resetQuantity} />
     </>
   );

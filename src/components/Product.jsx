@@ -8,6 +8,7 @@ export default function Product({ name, price, quantity }) {
         <p><strong>Price:</strong> ${price}</p>
         <p><strong>Quantity:</strong> {quantity}</p>
       </div>
+      
     </div>
   );
 }

@@ -37,6 +37,12 @@ export default function ProductList(props) {
                 <div className="col-4">
                   <strong>Total: ₹{product.quantity * product.price}</strong>
                 </div>
+                {/* Centered Remove Button */}
+      <div className="col-5 d-flex justify-content-center align-items-center">
+        <button className="btn btn-danger">
+          Remove
+        </button>
+      </div>
               </div>
             </li>
           ))

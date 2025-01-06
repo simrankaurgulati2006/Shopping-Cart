@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 class AddItem extends Component {
-  render() { 
+  render() {
     return (
-      <div>
+      <div className="container mt-5"> {/* Added a container with margin-top */}
         <form>
           {/* Name Input Section */}
           <div className="mb-3">
@@ -50,4 +50,3 @@ class AddItem extends Component {
 }
 
 export default AddItem;
-
