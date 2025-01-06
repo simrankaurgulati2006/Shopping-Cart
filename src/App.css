@@ -1,25 +1,25 @@
-/* Reset some global styles to ensure alignment */
+
 html, body {
-  height: 100%;   /* Ensures the page takes full height */
-  margin: 0;      /* Removes default margin */
-  padding: 0;     /* Removes default padding */
-   /* Ensures block-level rendering */
-  text-align: left;  /* Ensures text aligns to the left */
-  box-sizing: border-box; /* Avoids padding or border affecting width/height */
+  height: 100%;  
+  margin: 0;      
+  padding-top: calc(1rem - 10px);  
+  padding-bottom: calc(1rem - 10px); 
+  text-align: left;  
+  box-sizing: border-box; 
 }
 
 body {
-  font-family: Arial, sans-serif; /* Set the font for better readability */
+  font-family: Arial, sans-serif; 
 }
 
 .container {
-  margin-top: 10px; /* Adds space from the top of the page */
-  padding: 0; /* Ensures no padding from container */
-  width: 100%;  /* Full width of the screen */
+  margin-top: 10px; 
+  padding: 0; 
+  width: 100%;  
 }
 
 ul {
-  list-style-type: none;  /* Remove default list styling */
+  list-style-type: none;  
   padding: 0;
 }
 
@@ -29,8 +29,8 @@ ul {
   align-items: center;
   padding: 15px;
   margin-bottom: 10px;
-  background-color: #f8f9fa; /* Light background */
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #f8f9fa; 
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .badge {
@@ -41,5 +41,5 @@ ul {
 .col-4 {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #28a745; /* Green color for total price */
+  color: #28a745; 
 }

@@ -72,12 +72,21 @@ function App() {
     setTotalAmount(newTotalAmount);
     setProductList(newProductList);
   };
+  const addItem =(name,price) => {
+    let newProductList =[...productLit];
+    newProductList.push({
+      price:price,
+      name:name,
+      quantity:0
+    });
+    setProductList(newProductList);
+  }
 
   return (
     <>
       <Navbar />
       <main className="container">
-        <AddItem />
+        <AddItem addItem={addItem}/>
         {/* Pass incrementQuantity and decrementQuantity as props to ProductList */}
         <ProductList
           productList={productList}
