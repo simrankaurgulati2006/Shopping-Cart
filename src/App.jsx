@@ -23,42 +23,42 @@ function App() {
     },
   ];
 
-  // State hook for productList
+ 
   const [productList, setProductList] = useState(initialProductList);
   
-  // State hook for totalAmount
+  
   const [totalAmount, setTotalAmount] = useState(0);
 
-  // Increment quantity for a specific product and update totalAmount
+  
   const incrementQuantity = (index) => {
     const newProductList = [...productList];
     newProductList[index].quantity++;
     
-    // Update the totalAmount by adding the price of the incremented product
+  
     const newTotalAmount = totalAmount + newProductList[index].price;
     setTotalAmount(newTotalAmount);
     
     setProductList(newProductList);
   };
 
-  // Decrement quantity for a specific product and update totalAmount
+  
   const decrementQuantity = (index) => {
     const newProductList = [...productList];
     if (newProductList[index].quantity > 0) {
       newProductList[index].quantity--;
       
-      // Update the totalAmount by subtracting the price of the decremented product
+     
       const newTotalAmount = totalAmount - newProductList[index].price;
       setTotalAmount(newTotalAmount);
       setProductList(newProductList);
     }
   };
 
-  // Reset all quantities and totalAmount
+  
   const resetQuantity = () => {
     const newProductList = [...productList];
     
-    // Reset the quantity of all products to 0
+    
     newProductList.forEach(product => product.quantity = 0);
     
     // Reset the totalAmount to 0
