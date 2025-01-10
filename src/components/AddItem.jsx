@@ -4,13 +4,13 @@ class AddItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productName: "",    // State for product name
-      productPrice: 0,    // State for product price
-      items: [],          // State to hold the list of items
+      productName: "",    
+      productPrice: 0,    
+      items: [],          
     };
   }
 
-  // Handle form submission
+ 
   handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission
 
