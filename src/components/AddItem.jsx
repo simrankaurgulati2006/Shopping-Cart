@@ -12,23 +12,23 @@ class AddItem extends Component {
 
  
   handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); 
 
     const { productName, productPrice } = this.state;
 
-    // Validate before adding item
+  
     if (productName && productPrice > 0) {
-      // Add the new item to the list
+      
       this.setState((prevState) => ({
         items: [...prevState.items, { productName, productPrice }],
       }));
 
-      // Reset form fields after adding the item
+      
       this.setState({ productName: "", productPrice: 0 });
     }
   };
 
-  // Handle price change to ensure it's treated as a number
+  
   handlePriceChange = (e) => {
     const price = e.target.value ? parseFloat(e.target.value) : 0;
     this.setState({ productPrice: price });
@@ -55,13 +55,13 @@ class AddItem extends Component {
               />
             </div>
 
-            {/* Product Price Input */}
+            {}
             <div className="mb-3 col-6">
               <label htmlFor="inputPrice" className="form-label">
                 Price
               </label>
               <input
-                type="number" // Changed to 'number' input type for price
+                type="number" 
                 className="form-control"
                 id="inputPrice"
                 value={this.state.productPrice || ""}
