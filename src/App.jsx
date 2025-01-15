@@ -61,7 +61,7 @@ function App() {
     
     newProductList.forEach(product => product.quantity = 0);
     
-    // Reset the totalAmount to 0
+  
     setTotalAmount(0);
     setProductList(newProductList);
   };
