@@ -9,7 +9,7 @@ import AddItem from './components/AddItem';
 
 
 function App() {
-  // Initialize the productList state with hardcoded products
+
   const initialProductList = [
     {
       price: 99999,
